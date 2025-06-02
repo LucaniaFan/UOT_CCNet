@@ -10,76 +10,71 @@
 # Copyright (c) 2017 Megvii Technology Limited.
 
 import torch
+import torch.nn.functional as F
 import torch.autograd as ag
 
 __all__ = ['prroi_pool2d']
 
 
-_prroi_pooling = None
-
-
-def _import_prroi_pooling():
-    global _prroi_pooling
-
-    if _prroi_pooling is None:
-        try:
-            from os.path import join as pjoin, dirname
-            from torch.utils.cpp_extension import load as load_extension
-            root_dir = pjoin(dirname(__file__), 'src')
-
-            _prroi_pooling = load_extension(
-                '_prroi_pooling',
-                [pjoin(root_dir, 'prroi_pooling_gpu.c'), pjoin(root_dir, 'prroi_pooling_gpu_impl.cu')],
-                verbose=True
-            )
-        except ImportError:
-            raise ImportError('Can not compile Precise RoI Pooling library.')
-
-    return _prroi_pooling
-
-
-class PrRoIPool2DFunction(ag.Function):
-    @staticmethod
-    def forward(ctx, features, rois, pooled_height, pooled_width, spatial_scale):
-        _prroi_pooling = _import_prroi_pooling()
-
-        assert 'FloatTensor' in features.type() and 'FloatTensor' in rois.type(), \
-                'Precise RoI Pooling only takes float input, got {} for features and {} for rois.'.format(features.type(), rois.type())
-
-        pooled_height = int(pooled_height)
-        pooled_width = int(pooled_width)
-        spatial_scale = float(spatial_scale)
-
-        features = features.contiguous()
-        rois = rois.contiguous()
-        params = (pooled_height, pooled_width, spatial_scale)
-
-        if features.is_cuda:
-            output = _prroi_pooling.prroi_pooling_forward_cuda(features, rois, *params)
-            ctx.params = params
-            # everything here is contiguous.
-            ctx.save_for_backward(features, rois, output)
-        else:
-            raise NotImplementedError('Precise RoI Pooling only supports GPU (cuda) implememtations.')
-
-        return output
-
-    @staticmethod
-    def backward(ctx, grad_output):
-        _prroi_pooling = _import_prroi_pooling()
-
-        features, rois, output = ctx.saved_tensors
-        grad_input = grad_coor = None
-
-        if features.requires_grad:
-            grad_output = grad_output.contiguous()
-            grad_input = _prroi_pooling.prroi_pooling_backward_cuda(features, rois, output, grad_output, *ctx.params)
-        if rois.requires_grad:
-            grad_output = grad_output.contiguous()
-            grad_coor = _prroi_pooling.prroi_pooling_coor_backward_cuda(features, rois, output, grad_output, *ctx.params)
-
-        return grad_input, grad_coor, None, None, None
-
-
-prroi_pool2d = PrRoIPool2DFunction.apply
+def prroi_pool2d(features, rois, pooled_height, pooled_width, spatial_scale):
+    """
+    Pure Python implementation of Precise RoI Pooling
+    Args:
+        features: Input features (N, C, H, W)
+        rois: Region of interests (K, 5) [batch_idx, x1, y1, x2, y2]
+        pooled_height: Height of pooled output
+        pooled_width: Width of pooled output
+        spatial_scale: Scale factor for ROI coordinates
+    Returns:
+        Pooled features (K, C, pooled_height, pooled_width)
+    """
+    # Ensure inputs are on the same device
+    device = features.device
+    rois = rois.to(device)
+    
+    # Get batch size and number of channels
+    N, C, H, W = features.size()
+    K = rois.size(0)
+    
+    # Normalize coordinates
+    rois = rois.float()
+    rois[:, 1:] = rois[:, 1:] * spatial_scale
+    
+    # Initialize output tensor
+    output = torch.zeros((K, C, pooled_height, pooled_width), device=device)
+    
+    # Process each ROI
+    for k in range(K):
+        batch_idx = int(rois[k, 0])
+        x1, y1, x2, y2 = rois[k, 1:]
+        
+        # Clamp coordinates
+        x1 = max(0, min(x1, W - 1))
+        y1 = max(0, min(y1, H - 1))
+        x2 = max(0, min(x2, W - 1))
+        y2 = max(0, min(y2, H - 1))
+        
+        # Calculate grid points
+        grid_h = torch.linspace(y1, y2, pooled_height, device=device)
+        grid_w = torch.linspace(x1, x2, pooled_width, device=device)
+        
+        # Create grid for sampling
+        grid_y, grid_x = torch.meshgrid(grid_h, grid_w)
+        grid = torch.stack((grid_x, grid_y), dim=2).unsqueeze(0)
+        
+        # Normalize grid coordinates to [-1, 1]
+        grid[:, :, :, 0] = 2.0 * grid[:, :, :, 0] / (W - 1) - 1.0
+        grid[:, :, :, 1] = 2.0 * grid[:, :, :, 1] / (H - 1) - 1.0
+        
+        # Sample features using grid_sample
+        features_roi = features[batch_idx:batch_idx+1]
+        output[k] = F.grid_sample(
+            features_roi,
+            grid,
+            mode='bilinear',
+            padding_mode='zeros',
+            align_corners=True
+        ).squeeze(0)
+    
+    return output
 

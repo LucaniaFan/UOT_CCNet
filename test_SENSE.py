@@ -21,7 +21,7 @@ parser.add_argument(
     '--DATASET', type=str, default='SENSE',
     help='Directory where to write output frames (If None, no output)')
 parser.add_argument(
-    '--output_dir', type=str, default='../dataset/demo_den_test',
+    '--output_dir', type=str, default='../dataset/DRNET_den_test_5_SENSE',
     help='Directory where to write output frames (If None, no output)')
 parser.add_argument(
     '--test_intervals', type=int, default=15,
@@ -50,8 +50,26 @@ opt = parser.parse_args()
 opt.output_dir = opt.output_dir+'_'+opt.DATASET
 
 
+def get_device():
+    if torch.backends.mps.is_available():
+        return torch.device('mps')
+    elif torch.cuda.is_available():
+        return torch.device('cuda')
+    else:
+        return torch.device('cpu')
+
 def test(cfg_data):
+    device = get_device()
+    print(f"Using device: {device}")
+    
     net = Video_Individual_Counter(cfg, cfg_data)
+    net = net.to(device)
+    net.eval()
+    
+    # 加载模型权重
+    state_dict = torch.load(opt.model_path, map_location=device)
+    net.load_state_dict(state_dict, strict=True)
+
     with open(osp.join(cfg_data.DATA_PATH, 'scene_label.txt'), 'r') as f:
         lines = f.readlines()
     scene_label = {}
@@ -60,10 +78,6 @@ def test(cfg_data):
         scene_label.update({line[0]: [int(i) for i in line[1:]] })
 
     test_loader, restore_transform = datasets.loading_testset(opt.DATASET, test_interval=opt.test_intervals,mode='test')
-
-    state_dict = torch.load(opt.model_path)
-    net.load_state_dict(state_dict, strict=True)
-    net.eval()
 
     scenes_pred_dict = {'all':[], 'in':[], 'out':[], 'day':[],'night':[], 'scenic0':[], 'scenic1':[],'scenic2':[],
                       'scenic3':[],'scenic4':[],'scenic5':[], 'density0':[],'density1':[],'density2':[], 'density3':[],'density4':[] }
@@ -76,8 +90,11 @@ def test(cfg_data):
         intervals = opt.test_intervals
 
     for scene_id, sub_valset in enumerate(test_loader, 0):
-        # if scene_id>2:
-        #     break
+         # 只测试前5个视频
+        if scene_id >= 5:
+            break    
+        print(f"\nProcessing video {scene_id + 1}/5...")
+
         gen_tqdm = tqdm(sub_valset)
         video_time = len(sub_valset) + opt.test_intervals
         print(video_time)
@@ -88,11 +105,9 @@ def test(cfg_data):
 
         for vi, data in enumerate(gen_tqdm, 0):
             img, target = data
-            # import pdb
-            # pdb.set_trace()
             img, target = img[0], target[0]
             scene_name = target[0]['scene_name']
-            img = torch.stack(img, 0)
+            img = torch.stack(img, 0).to(device)
             with torch.no_grad():
                 b, c, h, w = img.shape
                 if h % 16 != 0:

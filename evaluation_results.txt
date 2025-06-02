@@ -1,0 +1,1837 @@
+Evaluation Results - 2025-04-14 15:18:49
+==================================================
+Intervals: 1
+
+
+Scene: 0817_2_cut_01
+Time frames: 7
+Final counts:
+  Predicted: inflow=3.31, outflow=6.29
+  Ground truth: inflow=5.00, outflow=7.00
+Metrics:
+  MAE: 0.53
+  MSE: 0.53
+  WRAE: 1.51%
+  MIAE: 1.12
+  MOAE: 1.73
+
+Scene: 0817_2_cut_02
+Time frames: 7
+Final counts:
+  Predicted: inflow=3.23, outflow=3.18
+  Ground truth: inflow=5.00, outflow=2.00
+Metrics:
+  MAE: 11.14
+  MSE: 11.14
+  WRAE: 28.56%
+  MIAE: 1.59
+  MOAE: 1.27
+
+Scene: 0817_3_cut_02
+Time frames: 7
+Final counts:
+  Predicted: inflow=1.89, outflow=5.88
+  Ground truth: inflow=1.00, outflow=4.00
+Metrics:
+  MAE: 11.56
+  MSE: 11.56
+  WRAE: 55.05%
+  MIAE: 1.78
+  MOAE: 1.03
+
+Scene: 0817_7_cut_01_crop
+Time frames: 7
+Final counts:
+  Predicted: inflow=1.95, outflow=7.91
+  Ground truth: inflow=3.00, outflow=7.00
+Metrics:
+  MAE: 2.39
+  MSE: 2.39
+  WRAE: 8.54%
+  MIAE: 1.34
+  MOAE: 2.19
+
+Scene: 0824_1_cut_02_rot_crop
+Time frames: 7
+Final counts:
+  Predicted: inflow=2.73, outflow=2.71
+  Ground truth: inflow=2.00, outflow=3.00
+Metrics:
+  MAE: 4.13
+  MSE: 4.13
+  WRAE: 29.50%
+  MIAE: 0.83
+  MOAE: 0.85
+
+Scene: 0824_2_cut_02_rot
+Time frames: 7
+Final counts:
+  Predicted: inflow=1.41, outflow=3.36
+  Ground truth: inflow=0.00, outflow=18.00
+Metrics:
+  MAE: 10.73
+  MSE: 10.73
+  WRAE: 39.74%
+  MIAE: 2.62
+  MOAE: 3.37
+
+Scene: 0824_3_cut_02
+Time frames: 7
+Final counts:
+  Predicted: inflow=7.68, outflow=1.64
+  Ground truth: inflow=4.00, outflow=2.00
+Metrics:
+  MAE: 6.61
+  MSE: 6.61
+  WRAE: 34.79%
+  MIAE: 1.55
+  MOAE: 1.33
+
+Scene: 0824_6_cut_01
+Time frames: 7
+Final counts:
+  Predicted: inflow=8.26, outflow=5.21
+  Ground truth: inflow=8.00, outflow=5.00
+Metrics:
+  MAE: 6.06
+  MSE: 6.06
+  WRAE: 11.65%
+  MIAE: 1.47
+  MOAE: 2.07
+
+Scene: 1019_IMG_1639_cut_03
+Time frames: 7
+Final counts:
+  Predicted: inflow=11.13, outflow=8.09
+  Ground truth: inflow=6.00, outflow=10.00
+Metrics:
+  MAE: 23.13
+  MSE: 23.13
+  WRAE: 55.07%
+  MIAE: 3.30
+  MOAE: 2.15
+
+Scene: 1019_IMG_1650_cut_05_rot_crop
+Time frames: 7
+Final counts:
+  Predicted: inflow=6.21, outflow=3.14
+  Ground truth: inflow=5.00, outflow=0.00
+Metrics:
+  MAE: 11.32
+  MSE: 11.32
+  WRAE: 62.89%
+  MIAE: 1.62
+  MOAE: 2.41
+
+Scene: 1019_IMG_5431_cut_02
+Time frames: 5
+Final counts:
+  Predicted: inflow=8.06, outflow=10.03
+  Ground truth: inflow=10.00, outflow=5.00
+Metrics:
+  MAE: 2.36
+  MSE: 2.36
+  WRAE: 7.87%
+  MIAE: 1.78
+  MOAE: 4.41
+
+Scene: 1019_IMG_5433_cut_05
+Time frames: 7
+Final counts:
+  Predicted: inflow=4.12, outflow=6.05
+  Ground truth: inflow=3.00, outflow=4.00
+Metrics:
+  MAE: 7.56
+  MSE: 7.56
+  WRAE: 26.07%
+  MIAE: 1.67
+  MOAE: 2.57
+
+Scene: 1019_IMG_5433_cut_06
+Time frames: 7
+Final counts:
+  Predicted: inflow=5.73, outflow=5.66
+  Ground truth: inflow=4.00, outflow=5.00
+Metrics:
+  MAE: 11.21
+  MSE: 11.21
+  WRAE: 50.95%
+  MIAE: 1.61
+  MOAE: 1.86
+
+Scene: 1019_IMG_5434_cut_01_crop
+Time frames: 7
+Final counts:
+  Predicted: inflow=18.65, outflow=7.61
+  Ground truth: inflow=18.00, outflow=14.00
+Metrics:
+  MAE: 30.25
+  MSE: 30.25
+  WRAE: 40.88%
+  MIAE: 5.31
+  MOAE: 5.85
+
+Scene: 1019_IMG_5434_cut_04_crop
+Time frames: 7
+Final counts:
+  Predicted: inflow=20.03, outflow=23.00
+  Ground truth: inflow=10.00, outflow=16.00
+Metrics:
+  MAE: 30.34
+  MSE: 30.34
+  WRAE: 30.04%
+  MIAE: 6.63
+  MOAE: 3.55
+
+Scene: 1019_IMG_5434_cut_05_crop
+Time frames: 7
+Final counts:
+  Predicted: inflow=15.41, outflow=12.33
+  Ground truth: inflow=18.00, outflow=16.00
+Metrics:
+  MAE: 21.05
+  MSE: 21.05
+  WRAE: 18.79%
+  MIAE: 6.14
+  MOAE: 3.39
+
+Scene: 1019_IMG_5491_cut_01
+Time frames: 7
+Final counts:
+  Predicted: inflow=8.54, outflow=6.39
+  Ground truth: inflow=8.00, outflow=14.00
+Metrics:
+  MAE: 15.03
+  MSE: 15.03
+  WRAE: 22.10%
+  MIAE: 2.60
+  MOAE: 4.75
+
+Scene: 1019_IMG_5491_cut_06
+Time frames: 7
+Final counts:
+  Predicted: inflow=9.15, outflow=5.99
+  Ground truth: inflow=12.00, outflow=7.00
+Metrics:
+  MAE: 8.43
+  MSE: 8.43
+  WRAE: 11.71%
+  MIAE: 3.42
+  MOAE: 3.15
+
+Scene: 1019_IMG_5495_cut_03
+Time frames: 7
+Final counts:
+  Predicted: inflow=10.52, outflow=3.43
+  Ground truth: inflow=8.00, outflow=2.00
+Metrics:
+  MAE: 8.26
+  MSE: 8.26
+  WRAE: 23.60%
+  MIAE: 1.42
+  MOAE: 1.50
+
+Scene: 1025_IMG_1728_cut_02
+Time frames: 7
+Final counts:
+  Predicted: inflow=10.55, outflow=18.39
+  Ground truth: inflow=7.00, outflow=13.00
+Metrics:
+  MAE: 30.28
+  MSE: 30.28
+  WRAE: 34.02%
+  MIAE: 4.33
+  MOAE: 3.59
+
+Scene: 1102_IMG_5764_cut_03
+Time frames: 7
+Final counts:
+  Predicted: inflow=4.37, outflow=2.33
+  Ground truth: inflow=3.00, outflow=1.00
+Metrics:
+  MAE: 1.34
+  MSE: 1.34
+  WRAE: 4.19%
+  MIAE: 1.34
+  MOAE: 1.05
+
+Scene: 1102_IMG_5764_cut_05
+Time frames: 7
+Final counts:
+  Predicted: inflow=3.54, outflow=5.49
+  Ground truth: inflow=1.00, outflow=5.00
+Metrics:
+  MAE: 5.88
+  MSE: 5.88
+  WRAE: 15.47%
+  MIAE: 1.09
+  MOAE: 1.48
+
+Scene: 1116_IMG_5311_cut_02
+Time frames: 7
+Final counts:
+  Predicted: inflow=4.15, outflow=7.15
+  Ground truth: inflow=6.00, outflow=7.00
+Metrics:
+  MAE: 1.87
+  MSE: 1.87
+  WRAE: 4.45%
+  MIAE: 0.94
+  MOAE: 1.82
+
+Scene: 1116_IMG_5317_cut_01
+Time frames: 7
+Final counts:
+  Predicted: inflow=10.50, outflow=5.50
+  Ground truth: inflow=9.00, outflow=7.00
+Metrics:
+  MAE: 2.13
+  MSE: 2.13
+  WRAE: 3.55%
+  MIAE: 0.88
+  MOAE: 1.49
+
+Scene: 1116_IMG_5318_cut_01
+Time frames: 7
+Final counts:
+  Predicted: inflow=6.79, outflow=10.79
+  Ground truth: inflow=9.00, outflow=7.00
+Metrics:
+  MAE: 10.26
+  MSE: 10.26
+  WRAE: 13.50%
+  MIAE: 2.37
+  MOAE: 4.20
+
+Scene: 1123_IMG_5896_cut_02
+Time frames: 7
+Final counts:
+  Predicted: inflow=4.14, outflow=5.08
+  Ground truth: inflow=10.00, outflow=5.00
+Metrics:
+  MAE: 2.99
+  MSE: 2.99
+  WRAE: 11.96%
+  MIAE: 2.13
+  MOAE: 1.13
+
+Scene: 1123_IMG_5896_cut_03
+Time frames: 7
+Final counts:
+  Predicted: inflow=6.09, outflow=7.04
+  Ground truth: inflow=6.00, outflow=2.00
+Metrics:
+  MAE: 11.90
+  MSE: 11.90
+  WRAE: 36.06%
+  MIAE: 1.70
+  MOAE: 1.82
+
+Scene: 1123_IMG_5896_cut_06
+Time frames: 7
+Final counts:
+  Predicted: inflow=7.92, outflow=5.86
+  Ground truth: inflow=6.00, outflow=6.00
+Metrics:
+  MAE: 7.69
+  MSE: 7.69
+  WRAE: 32.04%
+  MIAE: 2.48
+  MOAE: 1.83
+
+Scene: 1123_IMG_5897_cut_01_rot
+Time frames: 7
+Final counts:
+  Predicted: inflow=7.32, outflow=9.26
+  Ground truth: inflow=3.00, outflow=5.00
+Metrics:
+  MAE: 12.60
+  MSE: 12.60
+  WRAE: 33.16%
+  MIAE: 2.05
+  MOAE: 1.37
+
+Scene: 1123_IMG_5897_cut_02_rot
+Time frames: 7
+Final counts:
+  Predicted: inflow=4.30, outflow=7.27
+  Ground truth: inflow=5.00, outflow=5.00
+Metrics:
+  MAE: 6.61
+  MSE: 6.61
+  WRAE: 19.44%
+  MIAE: 1.14
+  MOAE: 1.69
+
+Scene: 1123_IMG_5897_cut_06_rot
+Time frames: 7
+Final counts:
+  Predicted: inflow=6.48, outflow=6.41
+  Ground truth: inflow=5.00, outflow=3.00
+Metrics:
+  MAE: 3.34
+  MSE: 3.34
+  WRAE: 9.82%
+  MIAE: 1.74
+  MOAE: 1.08
+
+Scene: 1123_IMG_5899_cut_03_rot
+Time frames: 7
+Final counts:
+  Predicted: inflow=9.46, outflow=7.37
+  Ground truth: inflow=6.00, outflow=11.00
+Metrics:
+  MAE: 17.93
+  MSE: 17.93
+  WRAE: 38.15%
+  MIAE: 2.71
+  MOAE: 2.07
+
+Scene: 1123_IMG_5899_cut_04_rot
+Time frames: 7
+Final counts:
+  Predicted: inflow=9.24, outflow=6.17
+  Ground truth: inflow=9.00, outflow=3.00
+Metrics:
+  MAE: 8.72
+  MSE: 8.72
+  WRAE: 21.80%
+  MIAE: 1.43
+  MOAE: 1.62
+
+Scene: 1123_IMG_5903_cut_06
+Time frames: 7
+Final counts:
+  Predicted: inflow=10.48, outflow=14.37
+  Ground truth: inflow=9.00, outflow=8.00
+Metrics:
+  MAE: 14.60
+  MSE: 14.60
+  WRAE: 19.73%
+  MIAE: 3.03
+  MOAE: 4.11
+
+Scene: 1123_IMG_5908_cut_05
+Time frames: 7
+Final counts:
+  Predicted: inflow=5.56, outflow=4.47
+  Ground truth: inflow=5.00, outflow=5.00
+Metrics:
+  MAE: 0.50
+  MSE: 0.50
+  WRAE: 1.22%
+  MIAE: 2.83
+  MOAE: 0.76
+
+Scene: 1123_IMG_5908_cut_06
+Time frames: 7
+Final counts:
+  Predicted: inflow=9.44, outflow=3.35
+  Ground truth: inflow=8.00, outflow=7.00
+Metrics:
+  MAE: 9.50
+  MSE: 9.50
+  WRAE: 28.79%
+  MIAE: 1.83
+  MOAE: 1.65
+
+Scene: 1130_video2_cut_02_crop
+Time frames: 7
+Final counts:
+  Predicted: inflow=2.71, outflow=29.70
+  Ground truth: inflow=0.00, outflow=36.00
+Metrics:
+  MAE: 7.11
+  MSE: 7.11
+  WRAE: 11.66%
+  MIAE: 3.83
+  MOAE: 23.11
+
+Scene: 1130_video2_cut_04_crop
+Time frames: 7
+Final counts:
+  Predicted: inflow=3.88, outflow=15.87
+  Ground truth: inflow=7.00, outflow=22.00
+Metrics:
+  MAE: 5.65
+  MSE: 5.65
+  WRAE: 12.84%
+  MIAE: 3.20
+  MOAE: 4.70
+
+Scene: 1130_video4_cut_03_crop
+Time frames: 7
+Final counts:
+  Predicted: inflow=25.16, outflow=14.99
+  Ground truth: inflow=16.00, outflow=11.00
+Metrics:
+  MAE: 77.16
+  MSE: 77.16
+  WRAE: 101.53%
+  MIAE: 11.93
+  MOAE: 13.07
+
+Scene: 1130_video4_cut_06_crop
+Time frames: 7
+Final counts:
+  Predicted: inflow=15.01, outflow=12.86
+  Ground truth: inflow=3.00, outflow=7.00
+Metrics:
+  MAE: 60.08
+  MSE: 60.08
+  WRAE: 207.17%
+  MIAE: 8.58
+  MOAE: 8.47
+
+Scene: 1130_video4_cut_07_crop
+Time frames: 7
+Final counts:
+  Predicted: inflow=13.03, outflow=23.01
+  Ground truth: inflow=4.00, outflow=2.00
+Metrics:
+  MAE: 48.20
+  MSE: 48.20
+  WRAE: 90.94%
+  MIAE: 6.89
+  MOAE: 7.30
+
+Scene: 1130_video5_cut_01_crop
+Time frames: 7
+Final counts:
+  Predicted: inflow=5.05, outflow=16.97
+  Ground truth: inflow=5.00, outflow=17.00
+Metrics:
+  MAE: 20.29
+  MSE: 20.29
+  WRAE: 34.98%
+  MIAE: 3.52
+  MOAE: 2.84
+
+Scene: 1130_video5_cut_03_crop
+Time frames: 7
+Final counts:
+  Predicted: inflow=3.36, outflow=15.26
+  Ground truth: inflow=2.00, outflow=15.00
+Metrics:
+  MAE: 15.98
+  MSE: 15.98
+  WRAE: 55.10%
+  MIAE: 2.46
+  MOAE: 1.64
+
+Scene: 1_cut_04
+Time frames: 7
+Final counts:
+  Predicted: inflow=3.71, outflow=8.67
+  Ground truth: inflow=4.00, outflow=5.00
+Metrics:
+  MAE: 5.44
+  MSE: 5.44
+  WRAE: 16.00%
+  MIAE: 1.21
+  MOAE: 1.38
+
+Scene: 3_cut_03
+Time frames: 7
+Final counts:
+  Predicted: inflow=4.17, outflow=14.15
+  Ground truth: inflow=5.00, outflow=11.00
+Metrics:
+  MAE: 4.67
+  MSE: 4.67
+  WRAE: 8.81%
+  MIAE: 2.20
+  MOAE: 2.45
+
+Scene: 3_cut_04
+Time frames: 7
+Final counts:
+  Predicted: inflow=6.82, outflow=8.82
+  Ground truth: inflow=9.00, outflow=11.00
+Metrics:
+  MAE: 2.00
+  MSE: 2.00
+  WRAE: 4.65%
+  MIAE: 2.35
+  MOAE: 1.77
+
+Scene: C0013_1_cut_01
+Time frames: 10
+Final counts:
+  Predicted: inflow=24.05, outflow=5.99
+  Ground truth: inflow=21.00, outflow=9.00
+Metrics:
+  MAE: 0.73
+  MSE: 0.73
+  WRAE: 0.69%
+  MIAE: 1.36
+  MOAE: 1.43
+
+Scene: C0013_1_cut_02
+Time frames: 14
+Final counts:
+  Predicted: inflow=26.54, outflow=12.52
+  Ground truth: inflow=22.00, outflow=18.00
+Metrics:
+  MAE: 17.98
+  MSE: 17.98
+  WRAE: 7.43%
+  MIAE: 2.44
+  MOAE: 3.11
+
+Scene: C0013_1_cut_04
+Time frames: 14
+Final counts:
+  Predicted: inflow=16.96, outflow=13.92
+  Ground truth: inflow=14.00, outflow=14.00
+Metrics:
+  MAE: 11.76
+  MSE: 11.76
+  WRAE: 6.19%
+  MIAE: 1.94
+  MOAE: 2.38
+
+Scene: Crowd_Flow_0003_cut_001
+Time frames: 7
+Final counts:
+  Predicted: inflow=26.63, outflow=5.61
+  Ground truth: inflow=32.00, outflow=1.00
+Metrics:
+  MAE: 10.91
+  MSE: 10.91
+  WRAE: 10.49%
+  MIAE: 1.87
+  MOAE: 4.42
+
+Scene: Crowd_Flow_0003_cut_004
+Time frames: 7
+Final counts:
+  Predicted: inflow=10.03, outflow=9.03
+  Ground truth: inflow=5.00, outflow=20.00
+Metrics:
+  MAE: 18.09
+  MSE: 18.09
+  WRAE: 25.84%
+  MIAE: 4.28
+  MOAE: 6.99
+
+Scene: IMG_1497_cut_01
+Time frames: 7
+Final counts:
+  Predicted: inflow=5.52, outflow=1.48
+  Ground truth: inflow=6.00, outflow=2.00
+Metrics:
+  MAE: 1.72
+  MSE: 1.72
+  WRAE: 9.05%
+  MIAE: 0.44
+  MOAE: 1.09
+
+Scene: IMG_1497_cut_04
+Time frames: 7
+Final counts:
+  Predicted: inflow=1.87, outflow=3.87
+  Ground truth: inflow=1.00, outflow=3.00
+Metrics:
+  MAE: 3.07
+  MSE: 3.07
+  WRAE: 23.62%
+  MIAE: 1.21
+  MOAE: 1.27
+
+Scene: IMG_1498_cut_01_crop
+Time frames: 7
+Final counts:
+  Predicted: inflow=0.14, outflow=9.10
+  Ground truth: inflow=0.00, outflow=9.00
+Metrics:
+  MAE: 5.96
+  MSE: 5.96
+  WRAE: 22.92%
+  MIAE: 1.59
+  MOAE: 1.63
+
+Scene: IMG_1500_cut_02_crop
+Time frames: 7
+Final counts:
+  Predicted: inflow=10.10, outflow=8.06
+  Ground truth: inflow=7.00, outflow=5.00
+Metrics:
+  MAE: 7.87
+  MSE: 7.87
+  WRAE: 20.71%
+  MIAE: 1.69
+  MOAE: 1.35
+
+Scene: IMG_4505_cut_01
+Time frames: 2
+Final counts:
+  Predicted: inflow=3.97, outflow=6.91
+  Ground truth: inflow=0.00, outflow=1.00
+Metrics:
+  MAE: 5.17
+  MSE: 5.17
+  WRAE: 73.86%
+  MIAE: 2.59
+  MOAE: 3.03
+
+Scene: IMG_4506_cut_02
+Time frames: 3
+Final counts:
+  Predicted: inflow=0.66, outflow=3.64
+  Ground truth: inflow=1.00, outflow=4.00
+Metrics:
+  MAE: 1.09
+  MSE: 1.09
+  WRAE: 21.80%
+  MIAE: 0.59
+  MOAE: 0.33
+
+Scene: IMG_4521_crop
+Time frames: 15
+Final counts:
+  Predicted: inflow=9.52, outflow=4.49
+  Ground truth: inflow=8.00, outflow=2.00
+Metrics:
+  MAE: 22.76
+  MSE: 22.76
+  WRAE: 47.42%
+  MIAE: 1.69
+  MOAE: 1.50
+
+Scene: IMG_4523_cut_01_crop
+Time frames: 7
+Final counts:
+  Predicted: inflow=5.85, outflow=11.83
+  Ground truth: inflow=8.00, outflow=10.00
+Metrics:
+  MAE: 12.55
+  MSE: 12.55
+  WRAE: 20.24%
+  MIAE: 2.58
+  MOAE: 2.12
+
+Scene: IMG_4524_cut_01
+Time frames: 7
+Final counts:
+  Predicted: inflow=9.88, outflow=10.82
+  Ground truth: inflow=12.00, outflow=13.00
+Metrics:
+  MAE: 1.01
+  MSE: 1.01
+  WRAE: 1.58%
+  MIAE: 2.39
+  MOAE: 1.35
+
+Scene: IMG_4524_cut_02
+Time frames: 5
+Final counts:
+  Predicted: inflow=9.78, outflow=15.74
+  Ground truth: inflow=12.00, outflow=17.00
+Metrics:
+  MAE: 13.04
+  MSE: 13.04
+  WRAE: 19.18%
+  MIAE: 3.67
+  MOAE: 3.92
+
+Scene: IMG_4527_cut_01_rot
+Time frames: 7
+Final counts:
+  Predicted: inflow=11.46, outflow=19.39
+  Ground truth: inflow=13.00, outflow=12.00
+Metrics:
+  MAE: 10.05
+  MSE: 10.05
+  WRAE: 15.23%
+  MIAE: 2.05
+  MOAE: 2.64
+
+Scene: IMG_4582_cut_04
+Time frames: 7
+Final counts:
+  Predicted: inflow=1.38, outflow=4.35
+  Ground truth: inflow=0.00, outflow=2.00
+Metrics:
+  MAE: 0.58
+  MSE: 0.58
+  WRAE: 3.05%
+  MIAE: 0.54
+  MOAE: 1.25
+
+Scene: IMG_4584_cut_01
+Time frames: 7
+Final counts:
+  Predicted: inflow=11.14, outflow=6.13
+  Ground truth: inflow=6.00, outflow=5.00
+Metrics:
+  MAE: 5.84
+  MSE: 5.84
+  WRAE: 13.58%
+  MIAE: 1.98
+  MOAE: 2.44
+
+Scene: IMG_4584_cut_03
+Time frames: 7
+Final counts:
+  Predicted: inflow=9.79, outflow=5.77
+  Ground truth: inflow=6.00, outflow=5.00
+Metrics:
+  MAE: 10.23
+  MSE: 10.23
+  WRAE: 23.25%
+  MIAE: 1.78
+  MOAE: 2.37
+
+Scene: IMG_4584_cut_04
+Time frames: 7
+Final counts:
+  Predicted: inflow=1.13, outflow=3.13
+  Ground truth: inflow=2.00, outflow=2.00
+Metrics:
+  MAE: 4.46
+  MSE: 4.46
+  WRAE: 26.24%
+  MIAE: 1.28
+  MOAE: 1.75
+
+Scene: IMG_4597_cut_01
+Time frames: 7
+Final counts:
+  Predicted: inflow=4.59, outflow=4.57
+  Ground truth: inflow=3.00, outflow=5.00
+Metrics:
+  MAE: 4.00
+  MSE: 4.00
+  WRAE: 17.39%
+  MIAE: 1.13
+  MOAE: 1.61
+
+Scene: IMG_4597_cut_02
+Time frames: 7
+Final counts:
+  Predicted: inflow=1.88, outflow=2.86
+  Ground truth: inflow=2.00, outflow=0.00
+Metrics:
+  MAE: 0.24
+  MSE: 0.24
+  WRAE: 1.33%
+  MIAE: 1.29
+  MOAE: 2.12
+
+Scene: IMG_4599_cut_02
+Time frames: 7
+Final counts:
+  Predicted: inflow=3.04, outflow=1.04
+  Ground truth: inflow=3.00, outflow=0.00
+Metrics:
+  MAE: 2.38
+  MSE: 2.38
+  WRAE: 12.53%
+  MIAE: 0.59
+  MOAE: 1.20
+
+Scene: IMG_4600_cut_02
+Time frames: 7
+Final counts:
+  Predicted: inflow=2.13, outflow=0.11
+  Ground truth: inflow=5.00, outflow=0.00
+Metrics:
+  MAE: 3.36
+  MSE: 3.36
+  WRAE: 25.85%
+  MIAE: 0.68
+  MOAE: 0.21
+
+Scene: IMG_4602_cut_02
+Time frames: 7
+Final counts:
+  Predicted: inflow=2.83, outflow=0.75
+  Ground truth: inflow=1.00, outflow=0.00
+Metrics:
+  MAE: 5.94
+  MSE: 5.94
+  WRAE: 27.00%
+  MIAE: 1.49
+  MOAE: 1.67
+
+Scene: IMG_4602_cut_03
+Time frames: 7
+Final counts:
+  Predicted: inflow=0.18, outflow=5.12
+  Ground truth: inflow=0.00, outflow=2.00
+Metrics:
+  MAE: 15.49
+  MSE: 15.49
+  WRAE: 172.11%
+  MIAE: 2.24
+  MOAE: 2.58
+
+Scene: IMG_4604_cut_03
+Time frames: 7
+Final counts:
+  Predicted: inflow=6.30, outflow=6.27
+  Ground truth: inflow=3.00, outflow=9.00
+Metrics:
+  MAE: 4.23
+  MSE: 4.23
+  WRAE: 9.00%
+  MIAE: 1.70
+  MOAE: 2.13
+
+Scene: IMG_4604_cut_04
+Time frames: 7
+Final counts:
+  Predicted: inflow=3.51, outflow=2.47
+  Ground truth: inflow=7.00, outflow=4.00
+Metrics:
+  MAE: 11.04
+  MSE: 11.04
+  WRAE: 29.05%
+  MIAE: 2.70
+  MOAE: 2.37
+
+Scene: IMG_4610_cut_01
+Time frames: 7
+Final counts:
+  Predicted: inflow=3.39, outflow=7.38
+  Ground truth: inflow=4.00, outflow=10.00
+Metrics:
+  MAE: 11.31
+  MSE: 11.31
+  WRAE: 24.59%
+  MIAE: 1.83
+  MOAE: 2.06
+
+Scene: IMG_4636_cut_02
+Time frames: 7
+Final counts:
+  Predicted: inflow=5.79, outflow=2.75
+  Ground truth: inflow=4.00, outflow=4.00
+Metrics:
+  MAE: 15.26
+  MSE: 15.26
+  WRAE: 52.62%
+  MIAE: 2.18
+  MOAE: 1.90
+
+Scene: IMG_4639_cut_03
+Time frames: 7
+Final counts:
+  Predicted: inflow=3.21, outflow=6.10
+  Ground truth: inflow=3.00, outflow=4.00
+Metrics:
+  MAE: 7.61
+  MSE: 7.61
+  WRAE: 28.19%
+  MIAE: 1.34
+  MOAE: 1.59
+
+Scene: IMG_4639_cut_04
+Time frames: 7
+Final counts:
+  Predicted: inflow=3.57, outflow=2.50
+  Ground truth: inflow=2.00, outflow=1.00
+Metrics:
+  MAE: 4.59
+  MSE: 4.59
+  WRAE: 15.30%
+  MIAE: 1.15
+  MOAE: 0.86
+
+Scene: IMG_4686_cut_03
+Time frames: 7
+Final counts:
+  Predicted: inflow=3.83, outflow=1.78
+  Ground truth: inflow=2.00, outflow=1.00
+Metrics:
+  MAE: 7.97
+  MSE: 7.97
+  WRAE: 37.95%
+  MIAE: 1.56
+  MOAE: 0.91
+
+Scene: IMG_4686_cut_04
+Time frames: 7
+Final counts:
+  Predicted: inflow=0.74, outflow=5.68
+  Ground truth: inflow=2.00, outflow=1.00
+Metrics:
+  MAE: 1.76
+  MSE: 1.76
+  WRAE: 8.38%
+  MIAE: 1.41
+  MOAE: 1.90
+
+Scene: IMG_4687_cut_02
+Time frames: 7
+Final counts:
+  Predicted: inflow=5.46, outflow=4.42
+  Ground truth: inflow=3.00, outflow=2.00
+Metrics:
+  MAE: 6.26
+  MSE: 6.26
+  WRAE: 32.95%
+  MIAE: 1.11
+  MOAE: 1.00
+
+Scene: IMG_4690_cut_02
+Time frames: 7
+Final counts:
+  Predicted: inflow=2.85, outflow=4.79
+  Ground truth: inflow=1.00, outflow=1.00
+Metrics:
+  MAE: 1.28
+  MSE: 1.28
+  WRAE: 6.40%
+  MIAE: 1.60
+  MOAE: 2.24
+
+Scene: IMG_4694_cut_03
+Time frames: 7
+Final counts:
+  Predicted: inflow=1.13, outflow=4.11
+  Ground truth: inflow=2.00, outflow=3.00
+Metrics:
+  MAE: 0.49
+  MSE: 0.49
+  WRAE: 4.08%
+  MIAE: 0.78
+  MOAE: 0.53
+
+Scene: IMG_4695_cut_03
+Time frames: 7
+Final counts:
+  Predicted: inflow=2.01, outflow=0.00
+  Ground truth: inflow=2.00, outflow=0.00
+Metrics:
+  MAE: 1.02
+  MSE: 1.02
+  WRAE: 17.00%
+  MIAE: 0.17
+  MOAE: 0.30
+
+Scene: IMG_4695_cut_06
+Time frames: 7
+Final counts:
+  Predicted: inflow=0.58, outflow=5.54
+  Ground truth: inflow=1.00, outflow=5.00
+Metrics:
+  MAE: 2.57
+  MSE: 2.57
+  WRAE: 14.28%
+  MIAE: 0.77
+  MOAE: 0.26
+
+Scene: IMG_4698_cut_02
+Time frames: 7
+Final counts:
+  Predicted: inflow=5.17, outflow=3.12
+  Ground truth: inflow=4.00, outflow=2.00
+Metrics:
+  MAE: 8.41
+  MSE: 8.41
+  WRAE: 28.03%
+  MIAE: 1.20
+  MOAE: 1.01
+
+Scene: IMG_4700_cut_04
+Time frames: 7
+Final counts:
+  Predicted: inflow=4.74, outflow=3.69
+  Ground truth: inflow=3.00, outflow=3.00
+Metrics:
+  MAE: 6.33
+  MSE: 6.33
+  WRAE: 23.44%
+  MIAE: 1.54
+  MOAE: 1.27
+
+Scene: IMG_4880_cut_02
+Time frames: 7
+Final counts:
+  Predicted: inflow=7.59, outflow=4.54
+  Ground truth: inflow=5.00, outflow=5.00
+Metrics:
+  MAE: 7.86
+  MSE: 7.86
+  WRAE: 24.56%
+  MIAE: 2.16
+  MOAE: 1.36
+
+Scene: IMG_4880_cut_05
+Time frames: 7
+Final counts:
+  Predicted: inflow=3.25, outflow=7.20
+  Ground truth: inflow=5.00, outflow=3.00
+Metrics:
+  MAE: 2.71
+  MSE: 2.71
+  WRAE: 7.53%
+  MIAE: 2.08
+  MOAE: 1.90
+
+Scene: IMG_4880_cut_10
+Time frames: 7
+Final counts:
+  Predicted: inflow=1.12, outflow=4.11
+  Ground truth: inflow=0.00, outflow=2.00
+Metrics:
+  MAE: 3.61
+  MSE: 3.61
+  WRAE: 25.79%
+  MIAE: 0.75
+  MOAE: 1.21
+
+Scene: IMG_4881_cut_08_rot
+Time frames: 7
+Final counts:
+  Predicted: inflow=0.33, outflow=4.31
+  Ground truth: inflow=1.00, outflow=4.00
+Metrics:
+  MAE: 1.65
+  MSE: 1.65
+  WRAE: 11.00%
+  MIAE: 1.01
+  MOAE: 0.81
+
+Scene: IMG_4882_cut_03
+Time frames: 7
+Final counts:
+  Predicted: inflow=0.05, outflow=1.99
+  Ground truth: inflow=0.00, outflow=2.00
+Metrics:
+  MAE: 1.88
+  MSE: 1.88
+  WRAE: 14.46%
+  MIAE: 0.64
+  MOAE: 0.68
+
+Scene: IMG_4882_cut_06
+Time frames: 7
+Final counts:
+  Predicted: inflow=3.25, outflow=2.23
+  Ground truth: inflow=3.00, outflow=3.00
+Metrics:
+  MAE: 1.14
+  MSE: 1.14
+  WRAE: 6.33%
+  MIAE: 1.31
+  MOAE: 1.01
+
+Scene: IMG_4882_cut_08
+Time frames: 7
+Final counts:
+  Predicted: inflow=2.82, outflow=3.80
+  Ground truth: inflow=2.00, outflow=2.00
+Metrics:
+  MAE: 0.05
+  MSE: 0.05
+  WRAE: 0.38%
+  MIAE: 0.34
+  MOAE: 0.75
+
+Scene: IMG_4882_cut_09
+Time frames: 7
+Final counts:
+  Predicted: inflow=2.92, outflow=0.91
+  Ground truth: inflow=4.00, outflow=2.00
+Metrics:
+  MAE: 1.24
+  MSE: 1.24
+  WRAE: 11.27%
+  MIAE: 0.49
+  MOAE: 0.60
+
+Scene: IMG_5046_cut_05_rot
+Time frames: 7
+Final counts:
+  Predicted: inflow=7.54, outflow=14.42
+  Ground truth: inflow=6.00, outflow=15.00
+Metrics:
+  MAE: 10.39
+  MSE: 10.39
+  WRAE: 17.61%
+  MIAE: 1.61
+  MOAE: 1.24
+
+Scene: IMG_5046_cut_06_rot
+Time frames: 7
+Final counts:
+  Predicted: inflow=8.04, outflow=4.95
+  Ground truth: inflow=4.00, outflow=5.00
+Metrics:
+  MAE: 17.64
+  MSE: 17.64
+  WRAE: 39.20%
+  MIAE: 2.52
+  MOAE: 1.47
+
+Scene: IMG_5047_cut_05_rot
+Time frames: 7
+Final counts:
+  Predicted: inflow=3.36, outflow=4.30
+  Ground truth: inflow=3.00, outflow=3.00
+Metrics:
+  MAE: 0.94
+  MSE: 0.94
+  WRAE: 2.04%
+  MIAE: 1.10
+  MOAE: 1.43
+
+Scene: IMG_5048_cut_05_rot
+Time frames: 7
+Final counts:
+  Predicted: inflow=11.39, outflow=10.24
+  Ground truth: inflow=11.00, outflow=10.00
+Metrics:
+  MAE: 5.69
+  MSE: 5.69
+  WRAE: 7.49%
+  MIAE: 1.53
+  MOAE: 1.23
+
+Scene: IMG_5051_cut_01_rot
+Time frames: 7
+Final counts:
+  Predicted: inflow=13.45, outflow=7.39
+  Ground truth: inflow=11.00, outflow=5.00
+Metrics:
+  MAE: 16.00
+  MSE: 16.00
+  WRAE: 40.00%
+  MIAE: 2.36
+  MOAE: 1.93
+
+Scene: IMG_5051_cut_04_rot
+Time frames: 7
+Final counts:
+  Predicted: inflow=3.81, outflow=7.73
+  Ground truth: inflow=2.00, outflow=8.00
+Metrics:
+  MAE: 13.14
+  MSE: 13.14
+  WRAE: 38.65%
+  MIAE: 1.88
+  MOAE: 1.91
+
+Scene: IMG_5052_cut_02
+Time frames: 7
+Final counts:
+  Predicted: inflow=18.48, outflow=7.41
+  Ground truth: inflow=11.00, outflow=9.00
+Metrics:
+  MAE: 19.89
+  MSE: 19.89
+  WRAE: 27.25%
+  MIAE: 3.45
+  MOAE: 2.00
+
+Scene: IMG_5053_cut_02
+Time frames: 7
+Final counts:
+  Predicted: inflow=7.08, outflow=0.04
+  Ground truth: inflow=4.00, outflow=1.00
+Metrics:
+  MAE: 0.38
+  MSE: 0.38
+  WRAE: 1.73%
+  MIAE: 1.27
+  MOAE: 1.76
+
+Scene: IMG_5053_cut_03
+Time frames: 7
+Final counts:
+  Predicted: inflow=10.70, outflow=2.69
+  Ground truth: inflow=8.00, outflow=3.00
+Metrics:
+  MAE: 4.89
+  MSE: 4.89
+  WRAE: 13.97%
+  MIAE: 1.84
+  MOAE: 1.82
+
+Scene: IMG_5053_cut_05
+Time frames: 7
+Final counts:
+  Predicted: inflow=5.30, outflow=7.29
+  Ground truth: inflow=5.00, outflow=5.00
+Metrics:
+  MAE: 5.65
+  MSE: 5.65
+  WRAE: 20.93%
+  MIAE: 1.64
+  MOAE: 1.46
+
+Scene: IMG_5053_cut_06
+Time frames: 7
+Final counts:
+  Predicted: inflow=4.39, outflow=6.36
+  Ground truth: inflow=1.00, outflow=5.00
+Metrics:
+  MAE: 0.76
+  MSE: 0.76
+  WRAE: 2.37%
+  MIAE: 2.73
+  MOAE: 0.81
+
+Scene: IMG_5057_cut_01
+Time frames: 4
+Final counts:
+  Predicted: inflow=6.38, outflow=7.33
+  Ground truth: inflow=4.00, outflow=5.00
+Metrics:
+  MAE: 6.37
+  MSE: 6.37
+  WRAE: 28.95%
+  MIAE: 1.59
+  MOAE: 1.52
+
+Scene: IMG_5058_cut_01
+Time frames: 7
+Final counts:
+  Predicted: inflow=6.11, outflow=5.07
+  Ground truth: inflow=6.00, outflow=6.00
+Metrics:
+  MAE: 3.06
+  MSE: 3.06
+  WRAE: 6.80%
+  MIAE: 0.99
+  MOAE: 0.68
+
+Scene: IMG_5059_cut_01_rot
+Time frames: 7
+Final counts:
+  Predicted: inflow=11.02, outflow=18.93
+  Ground truth: inflow=9.00, outflow=18.00
+Metrics:
+  MAE: 15.31
+  MSE: 15.31
+  WRAE: 30.02%
+  MIAE: 2.19
+  MOAE: 2.08
+
+Scene: IMG_5135_cut_01
+Time frames: 6
+Final counts:
+  Predicted: inflow=1.94, outflow=2.93
+  Ground truth: inflow=1.00, outflow=2.00
+Metrics:
+  MAE: 1.16
+  MSE: 1.16
+  WRAE: 12.89%
+  MIAE: 0.63
+  MOAE: 0.77
+
+Scene: IMG_5158_cut_02
+Time frames: 7
+Final counts:
+  Predicted: inflow=3.79, outflow=1.79
+  Ground truth: inflow=5.00, outflow=3.00
+Metrics:
+  MAE: 0.28
+  MSE: 0.28
+  WRAE: 1.33%
+  MIAE: 0.86
+  MOAE: 0.70
+
+Scene: IMG_5159_cut_02
+Time frames: 7
+Final counts:
+  Predicted: inflow=6.72, outflow=4.66
+  Ground truth: inflow=7.00, outflow=2.00
+Metrics:
+  MAE: 7.78
+  MSE: 7.78
+  WRAE: 17.68%
+  MIAE: 1.87
+  MOAE: 2.37
+
+Scene: IMG_5160_cut_01_rot
+Time frames: 7
+Final counts:
+  Predicted: inflow=10.63, outflow=7.56
+  Ground truth: inflow=8.00, outflow=13.00
+Metrics:
+  MAE: 3.15
+  MSE: 3.15
+  WRAE: 3.32%
+  MIAE: 1.48
+  MOAE: 2.68
+
+Scene: IMG_5164_cut_02_rot
+Time frames: 7
+Final counts:
+  Predicted: inflow=8.28, outflow=4.20
+  Ground truth: inflow=7.00, outflow=3.00
+Metrics:
+  MAE: 3.76
+  MSE: 3.76
+  WRAE: 8.74%
+  MIAE: 0.97
+  MOAE: 1.53
+
+Scene: IMG_5164_cut_06_rot
+Time frames: 7
+Final counts:
+  Predicted: inflow=2.17, outflow=4.12
+  Ground truth: inflow=0.00, outflow=4.00
+Metrics:
+  MAE: 7.67
+  MSE: 7.67
+  WRAE: 31.96%
+  MIAE: 1.23
+  MOAE: 1.08
+
+Scene: IMG_5164_cut_07_rot
+Time frames: 7
+Final counts:
+  Predicted: inflow=3.09, outflow=5.04
+  Ground truth: inflow=3.00, outflow=6.00
+Metrics:
+  MAE: 1.33
+  MSE: 1.33
+  WRAE: 6.05%
+  MIAE: 0.40
+  MOAE: 0.51
+
+Scene: IMG_5165_cut_02_rot
+Time frames: 7
+Final counts:
+  Predicted: inflow=9.98, outflow=4.89
+  Ground truth: inflow=8.00, outflow=3.00
+Metrics:
+  MAE: 16.88
+  MSE: 16.88
+  WRAE: 49.65%
+  MIAE: 2.41
+  MOAE: 2.07
+
+Scene: IMG_5165_cut_03_rot
+Time frames: 7
+Final counts:
+  Predicted: inflow=3.63, outflow=5.58
+  Ground truth: inflow=3.00, outflow=4.00
+Metrics:
+  MAE: 12.45
+  MSE: 12.45
+  WRAE: 138.33%
+  MIAE: 1.95
+  MOAE: 1.71
+
+Scene: IMG_5168_cut_03
+Time frames: 7
+Final counts:
+  Predicted: inflow=5.27, outflow=12.19
+  Ground truth: inflow=5.00, outflow=15.00
+Metrics:
+  MAE: 12.34
+  MSE: 12.34
+  WRAE: 27.42%
+  MIAE: 2.39
+  MOAE: 2.28
+
+Scene: IMG_5168_cut_04
+Time frames: 7
+Final counts:
+  Predicted: inflow=9.00, outflow=5.89
+  Ground truth: inflow=6.00, outflow=8.00
+Metrics:
+  MAE: 12.47
+  MSE: 12.47
+  WRAE: 19.79%
+  MIAE: 2.07
+  MOAE: 2.39
+
+Scene: IMG_5169_cut_03
+Time frames: 7
+Final counts:
+  Predicted: inflow=7.87, outflow=5.79
+  Ground truth: inflow=7.00, outflow=5.00
+Metrics:
+  MAE: 6.10
+  MSE: 6.10
+  WRAE: 12.45%
+  MIAE: 1.60
+  MOAE: 1.92
+
+Scene: IMG_5169_cut_04
+Time frames: 7
+Final counts:
+  Predicted: inflow=6.57, outflow=5.50
+  Ground truth: inflow=4.00, outflow=4.00
+Metrics:
+  MAE: 11.82
+  MSE: 11.82
+  WRAE: 32.83%
+  MIAE: 2.32
+  MOAE: 1.44
+
+Scene: IMG_5213_cut_05_rot
+Time frames: 7
+Final counts:
+  Predicted: inflow=1.29, outflow=4.20
+  Ground truth: inflow=0.00, outflow=4.00
+Metrics:
+  MAE: 7.37
+  MSE: 7.37
+  WRAE: 25.41%
+  MIAE: 1.81
+  MOAE: 1.81
+
+Scene: IMG_5213_cut_09_rot
+Time frames: 7
+Final counts:
+  Predicted: inflow=9.28, outflow=7.20
+  Ground truth: inflow=8.00, outflow=4.00
+Metrics:
+  MAE: 15.48
+  MSE: 15.48
+  WRAE: 43.00%
+  MIAE: 2.60
+  MOAE: 2.43
+
+Scene: IMG_5214_cut_05_rot
+Time frames: 7
+Final counts:
+  Predicted: inflow=3.97, outflow=5.91
+  Ground truth: inflow=8.00, outflow=7.00
+Metrics:
+  MAE: 8.67
+  MSE: 8.67
+  WRAE: 15.21%
+  MIAE: 1.95
+  MOAE: 2.99
+
+Scene: IMG_5214_cut_06_rot
+Time frames: 7
+Final counts:
+  Predicted: inflow=11.29, outflow=4.20
+  Ground truth: inflow=9.00, outflow=5.00
+Metrics:
+  MAE: 9.00
+  MSE: 9.00
+  WRAE: 20.93%
+  MIAE: 1.74
+  MOAE: 1.87
+
+Scene: IMG_5214_cut_09_rot
+Time frames: 7
+Final counts:
+  Predicted: inflow=9.59, outflow=11.47
+  Ground truth: inflow=10.00, outflow=11.00
+Metrics:
+  MAE: 8.68
+  MSE: 8.68
+  WRAE: 10.85%
+  MIAE: 3.70
+  MOAE: 1.16
+
+Scene: IMG_5215_cut_02
+Time frames: 7
+Final counts:
+  Predicted: inflow=8.19, outflow=4.14
+  Ground truth: inflow=10.00, outflow=5.00
+Metrics:
+  MAE: 4.05
+  MSE: 4.05
+  WRAE: 7.64%
+  MIAE: 1.17
+  MOAE: 1.25
+
+Scene: IMG_5215_cut_05
+Time frames: 7
+Final counts:
+  Predicted: inflow=9.49, outflow=11.46
+  Ground truth: inflow=10.00, outflow=10.00
+Metrics:
+  MAE: 5.07
+  MSE: 5.07
+  WRAE: 8.45%
+  MIAE: 1.69
+  MOAE: 1.18
+
+Scene: IMG_5215_cut_07
+Time frames: 7
+Final counts:
+  Predicted: inflow=9.64, outflow=5.61
+  Ground truth: inflow=12.00, outflow=4.00
+Metrics:
+  MAE: 0.58
+  MSE: 0.58
+  WRAE: 1.05%
+  MIAE: 1.09
+  MOAE: 1.45
+
+Scene: IMG_5216_cut_01
+Time frames: 7
+Final counts:
+  Predicted: inflow=6.90, outflow=13.88
+  Ground truth: inflow=8.00, outflow=11.00
+Metrics:
+  MAE: 0.22
+  MSE: 0.22
+  WRAE: 0.46%
+  MIAE: 2.11
+  MOAE: 1.33
+
+Scene: IMG_5217_cut_01
+Time frames: 7
+Final counts:
+  Predicted: inflow=5.19, outflow=4.17
+  Ground truth: inflow=8.00, outflow=7.00
+Metrics:
+  MAE: 0.47
+  MSE: 0.47
+  WRAE: 1.27%
+  MIAE: 1.67
+  MOAE: 1.62
+
+Scene: IMG_5218_cut_01
+Time frames: 7
+Final counts:
+  Predicted: inflow=10.73, outflow=3.67
+  Ground truth: inflow=7.00, outflow=5.00
+Metrics:
+  MAE: 8.96
+  MSE: 8.96
+  WRAE: 24.22%
+  MIAE: 1.55
+  MOAE: 1.20
+
+Scene: IMG_5219_cut_04
+Time frames: 7
+Final counts:
+  Predicted: inflow=8.11, outflow=10.04
+  Ground truth: inflow=8.00, outflow=7.00
+Metrics:
+  MAE: 0.90
+  MSE: 0.90
+  WRAE: 1.58%
+  MIAE: 1.35
+  MOAE: 0.97
+
+Scene: IMG_6764_cut_04
+Time frames: 7
+Final counts:
+  Predicted: inflow=2.11, outflow=3.03
+  Ground truth: inflow=6.00, outflow=5.00
+Metrics:
+  MAE: 8.04
+  MSE: 8.04
+  WRAE: 18.27%
+  MIAE: 2.26
+  MOAE: 2.46
+
+Scene: LTLU9157_crop
+Time frames: 2
+Final counts:
+  Predicted: inflow=19.54, outflow=18.53
+  Ground truth: inflow=21.00, outflow=34.00
+Metrics:
+  MAE: 3.31
+  MSE: 3.31
+  WRAE: 6.90%
+  MIAE: 1.65
+  MOAE: 23.67
+
+Scene: RJJQ9250_1_crop
+Time frames: 2
+Final counts:
+  Predicted: inflow=15.96, outflow=30.95
+  Ground truth: inflow=33.00, outflow=46.00
+Metrics:
+  MAE: 35.50
+  MSE: 35.50
+  WRAE: 55.47%
+  MIAE: 17.75
+  MOAE: 21.76
+
+Scene: VID_20200823_162122_cut_01
+Time frames: 7
+Final counts:
+  Predicted: inflow=13.61, outflow=20.53
+  Ground truth: inflow=13.00, outflow=21.00
+Metrics:
+  MAE: 8.97
+  MSE: 8.97
+  WRAE: 9.06%
+  MIAE: 2.49
+  MOAE: 2.38
+
+Scene: VID_20200823_162122_cut_05
+Time frames: 7
+Final counts:
+  Predicted: inflow=13.51, outflow=10.45
+  Ground truth: inflow=12.00, outflow=12.00
+Metrics:
+  MAE: 9.00
+  MSE: 9.00
+  WRAE: 8.04%
+  MIAE: 2.16
+  MOAE: 2.42
+
+Scene: VID_20200823_162122_cut_06
+Time frames: 7
+Final counts:
+  Predicted: inflow=9.90, outflow=9.80
+  Ground truth: inflow=9.00, outflow=8.00
+Metrics:
+  MAE: 18.57
+  MSE: 18.57
+  WRAE: 29.02%
+  MIAE: 3.14
+  MOAE: 2.94
+
+Scene: VID_20200823_162741_cut_06_rot
+Time frames: 7
+Final counts:
+  Predicted: inflow=0.17, outflow=0.13
+  Ground truth: inflow=0.00, outflow=0.00
+Metrics:
+  MAE: 1.78
+  MSE: 1.78
+  WRAE: 8.09%
+  MIAE: 1.14
+  MOAE: 1.19
+
+Scene: VID_20200823_163428_cut_01_rot_crop
+Time frames: 7
+Final counts:
+  Predicted: inflow=4.29, outflow=4.28
+  Ground truth: inflow=6.00, outflow=5.00
+Metrics:
+  MAE: 1.46
+  MSE: 1.46
+  WRAE: 4.71%
+  MIAE: 1.21
+  MOAE: 0.94
+
+Scene: VID_20200823_163428_cut_02_rot_crop
+Time frames: 7
+Final counts:
+  Predicted: inflow=4.05, outflow=6.01
+  Ground truth: inflow=6.00, outflow=4.00
+Metrics:
+  MAE: 1.45
+  MSE: 1.45
+  WRAE: 3.63%
+  MIAE: 1.04
+  MOAE: 0.95
+
+Scene: VID_20200823_164830_cut_05_rot_crop
+Time frames: 7
+Final counts:
+  Predicted: inflow=4.11, outflow=7.09
+  Ground truth: inflow=4.00, outflow=4.00
+Metrics:
+  MAE: 8.66
+  MSE: 8.66
+  WRAE: 34.64%
+  MIAE: 1.24
+  MOAE: 1.46
+
+Scene: v_00002
+Time frames: 7
+Final counts:
+  Predicted: inflow=28.43, outflow=25.43
+  Ground truth: inflow=11.00, outflow=8.00
+Metrics:
+  MAE: 77.60
+  MSE: 77.60
+  WRAE: 69.29%
+  MIAE: 11.09
+  MOAE: 14.19
+
+Scene: v_00003
+Time frames: 7
+Final counts:
+  Predicted: inflow=1.08, outflow=2.08
+  Ground truth: inflow=3.00, outflow=4.00
+Metrics:
+  MAE: 6.23
+  MSE: 6.23
+  WRAE: 28.32%
+  MIAE: 1.66
+  MOAE: 1.80
+
+Scene: v_00004
+Time frames: 7
+Final counts:
+  Predicted: inflow=1.41, outflow=2.41
+  Ground truth: inflow=1.00, outflow=4.00
+Metrics:
+  MAE: 4.18
+  MSE: 4.18
+  WRAE: 27.87%
+  MIAE: 1.36
+  MOAE: 1.10
+
+Scene: v_00009
+Time frames: 7
+Final counts:
+  Predicted: inflow=3.66, outflow=1.62
+  Ground truth: inflow=3.00, outflow=0.00
+Metrics:
+  MAE: 5.59
+  MSE: 5.59
+  WRAE: 34.94%
+  MIAE: 1.38
+  MOAE: 1.20
+
+Scene: v_00010
+Time frames: 7
+Final counts:
+  Predicted: inflow=4.09, outflow=2.02
+  Ground truth: inflow=2.00, outflow=2.00
+Metrics:
+  MAE: 6.94
+  MSE: 6.94
+  WRAE: 53.38%
+  MIAE: 1.79
+  MOAE: 2.02
+
+Scene: v_00015
+Time frames: 7
+Final counts:
+  Predicted: inflow=10.50, outflow=15.48
+  Ground truth: inflow=13.00, outflow=16.00
+Metrics:
+  MAE: 7.18
+  MSE: 7.18
+  WRAE: 8.25%
+  MIAE: 2.98
+  MOAE: 3.57
+
+Scene: video_001
+Time frames: 7
+Final counts:
+  Predicted: inflow=9.96, outflow=19.90
+  Ground truth: inflow=18.00, outflow=19.00
+Metrics:
+  MAE: 21.16
+  MSE: 21.16
+  WRAE: 19.78%
+  MIAE: 4.03
+  MOAE: 3.47
+
+Scene: video_003_crop
+Time frames: 7
+Final counts:
+  Predicted: inflow=15.05, outflow=14.01
+  Ground truth: inflow=12.00, outflow=10.00
+Metrics:
+  MAE: 0.14
+  MSE: 0.14
+  WRAE: 0.15%
+  MIAE: 4.61
+  MOAE: 4.56
+
+==================================================
+Overall Metrics:
+  Total Scenes: 152
+  MAE: 9.45
+  MSE: 14.98
+  WRAE: 24.17%
+  MIAE: 2.14
+  MOAE: 2.36

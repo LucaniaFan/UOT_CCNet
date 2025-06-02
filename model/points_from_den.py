@@ -58,7 +58,8 @@ def local_maximum_points(sub_pre, gaussian_maximun,radius=8.):
     sub_pre = sub_pre.detach()
     _,_,h,w = sub_pre.size()
     kernel = torch.ones(3,3)/9.
-    kernel =kernel.unsqueeze(0).unsqueeze(0).cuda()
+    device = sub_pre.device
+    kernel = kernel.unsqueeze(0).unsqueeze(0).to(device)
     weight = nn.Parameter(data=kernel, requires_grad=False)
     sub_pre = F.conv2d(sub_pre, weight, stride=1, padding=1)
 
@@ -72,7 +73,7 @@ def local_maximum_points(sub_pre, gaussian_maximun,radius=8.):
     count = int(torch.sum(sub_pre).item())
 
     points = torch.nonzero(sub_pre)[:,[0,1,3,2]].float() # b,c,h,w->b,c,w,h
-    rois = torch.zeros((points.size(0), 5)).float().to(sub_pre)
+    rois = torch.zeros((points.size(0), 5)).float().to(device)
     rois[:, 0] = points[:, 0]
     rois[:, 1] = torch.clamp(points[:, 2] - radius, min=0)
     rois[:, 2] = torch.clamp(points[:, 3] - radius, min=0)

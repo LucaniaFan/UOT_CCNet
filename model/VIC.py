@@ -10,13 +10,14 @@ from .optimal_transport_layer import Optimal_Transport_Layer
 from model.points_from_den import *
 from collections import  OrderedDict
 import copy
+
 class Video_Individual_Counter(nn.Module):
     def __init__(self, cfg, cfg_data, pretrained=True):
         super(Video_Individual_Counter, self).__init__()
-        self.cfg = cfg
         self.dataset_cfg = cfg_data
-        self.radius = self.cfg.ROI_RADIUS
-        self.feature_scale = 1/4.
+        self.cfg = cfg
+        self.device = torch.device('mps' if torch.backends.mps.is_available() else 'cpu')
+        
         OT_config = {
             'feature_dim': cfg.FEATURE_DIM,
             'sinkhorn_iterations':cfg.sinkhorn_iterations,
@@ -28,15 +29,21 @@ class Video_Individual_Counter(nn.Module):
         else:
             raise  Exception("The backbone is out of setting, Please chose HR_Net or VGG16_FPN")
 
-
-        if len(cfg.GPU_ID) >=1:
-            self.Extractor = torch.nn.DataParallel(self.Extractor).cuda()
-
-        self.Gaussian = Gaussianlayer().cuda()
+        self.Extractor = torch.nn.DataParallel(self.Extractor).to(self.device)
+        self.Gaussian = Gaussianlayer().to(self.device)
         self.gaussian_maximum=self.Gaussian.gaussian.gkernel.weight.max()
-        self.Matching_Layer =Optimal_Transport_Layer(OT_config).cuda()
+        self.Matching_Layer = Optimal_Transport_Layer(OT_config).to(self.device)
+        
+        # 初始化参数
+        self.param = {}
+        self.param['crop_size'] = cfg_data.TRAIN_SIZE
+        self.param['sigma'] = getattr(cfg_data, 'SIGMA', 15)
+        self.param['batch_size'] = getattr(cfg, 'TRAIN_BATCH_SIZE', 1)
+        self.param['train_size'] = cfg_data.TRAIN_SIZE
+        self.param['test_size'] = getattr(cfg_data, 'TEST_SIZE', cfg_data.TRAIN_SIZE)
 
-        self.device = torch.cuda.current_device()
+        self.radius = self.cfg.ROI_RADIUS
+        self.feature_scale = 1/4.
         self.get_ROI_and_MatchInfo = get_ROI_and_MatchInfo( self.dataset_cfg .TRAIN_SIZE, self.radius, feature_scale=self.feature_scale)
 
     @property
@@ -193,7 +200,7 @@ class Video_Individual_Counter(nn.Module):
         x = torch.zeros(pre_map.size())
         points = target[0]['points'].long()
         x[0, 0, points[:, 1], points[:, 0]] = 1
-        gt_den = self.Gaussian(x.cuda())
+        gt_den = self.Gaussian(x.to(self.device))
         assert pre_map.size() == gt_den.size()
         pre_map = pre_map / self.dataset_cfg.DEN_FACTOR
 

@@ -10,6 +10,10 @@ import torch.nn.functional as F
 from pathlib import Path
 import argparse
 import matplotlib.cm as cm
+import cv2
+import os
+import os.path as osp
+
 parser = argparse.ArgumentParser(
     description='VIC test and demo',
     formatter_class=argparse.ArgumentDefaultsHelpFormatter)
@@ -47,12 +51,26 @@ opt = parser.parse_args()
 opt.output_dir = opt.output_dir+'_'+opt.DATASET
 
 
+def get_device():
+    if torch.backends.mps.is_available():
+        return torch.device('mps')
+    elif torch.cuda.is_available():
+        return torch.device('cuda')
+    else:
+        return torch.device('cpu')
+
 def test(cfg_data):
+    device = get_device()
+    print(f"Using device: {device}")
+    
     net = Video_Individual_Counter(cfg, cfg_data)
-    test_loader, restore_transform = datasets.loading_testset(opt.DATASET, test_interval=opt.test_intervals, mode='test')
-    state_dict = torch.load(opt.model_path)
-    net.load_state_dict(state_dict, strict=True)
+    net = net.to(device)
     net.eval()
+    
+    test_loader, restore_transform = datasets.loading_testset(opt.DATASET, test_interval=opt.test_intervals, mode='test')
+    state_dict = torch.load(opt.model_path, map_location=device)
+    net.load_state_dict(state_dict, strict=True)
+   
 
     gt_flow_cnt = [133,737,734,1040,321]
     scenes_pred_dict = []
@@ -60,15 +78,24 @@ def test(cfg_data):
         intervals = 1
     else:
         intervals = opt.test_intervals
+
     for scene_id, sub_valset in enumerate(test_loader, 0):
+        if scene_id >= 5:
+            break    
+        print(f"\nProcessing video {scene_id + 1}/5...")
+
         gen_tqdm = tqdm(sub_valset)
         video_time = len(sub_valset) + opt.test_intervals
         print(video_time)
+        
+        scene_name = ''
         pred_dict = {'id': scene_id, 'time': video_time, 'first_frame': 0, 'inflow': [], 'outflow': []}
+        gt_dict = {'id': scene_id, 'time': video_time, 'first_frame': 0, 'inflow': [], 'outflow': []}
         for vi, data in enumerate(gen_tqdm, 0):
-            img,__ = data
-            img = img[0]
-            img = torch.stack(img, 0)
+            img, target = data
+            img, target = img[0], target[0]
+            scene_name = target[0]['scene_name']
+            img = torch.stack(img, 0).to(device)
             with torch.no_grad():
                 b, c, h, w = img.shape
                 if h % 16 != 0:
@@ -89,7 +116,8 @@ def test(cfg_data):
 
                 if frame_signal == 'match' or not opt.skip_flag:
 
-                    pred_map, matched_results = net.test_forward(img, frame_signal)
+                    pred_map, gt_den, matched_results = net.val_forward(img, target, frame_signal)
+                    gt_count, pred_cnt = gt_den[0].sum().item(), pred_map[0].sum().item()
 
                     #=========================================================
                     pred_cnt = pred_map[0].sum().item()
@@ -102,20 +130,24 @@ def test(cfg_data):
                     pred_dict['outflow'].append(matched_results['pre_outflow'])
 
                 if frame_signal == 'match':
-                    pre_crowdflow_cnt, _, _ = compute_metrics_single_scene(pred_dict, intervals)
+                    pre_crowdflow_cnt, gt_crowdflow_cnt, _, _ = compute_metrics_single_scene(pred_dict, gt_dict, intervals)
 
-                    print(' den_pre:  %.2f pre_crowd_flow: %.2f pre_inflow:%.2f'
-                          %  (pred_cnt, pre_crowdflow_cnt,matched_results['pre_inflow']))
+                    print('den_gt: %.2f den_pre: %.2f gt_crowd_flow: %.2f, pre_crowd_flow: %.2f gt_inflow: %.2f pre_inflow:%.2f'
+                          % (gt_count, pred_cnt, gt_crowdflow_cnt, pre_crowdflow_cnt, matched_results['gt_inflow'],
+                             matched_results['pre_inflow']))
 
                     kpts0 = matched_results['pre_points'][0][:, 2:4].cpu().numpy()
                     kpts1 = matched_results['pre_points'][1][:, 2:4].cpu().numpy()
 
                     matches = matched_results['matches0'].cpu().numpy()
                     confidence = matched_results['matching_scores0'].cpu().numpy()
-                    # if kpts0.shape[0] > 0 and kpts1.shape[0] > 0:
-                    #     save_visImg(kpts0, kpts1, matches, confidence, vi, img[0].clone(), img[1].clone(),
-                    #                 opt.test_intervals, opt.output_dir, None, None, scene_id, restore_transform)
+                    if kpts0.shape[0] > 0 and kpts1.shape[0] > 0:
+                        save_visImg(kpts0, kpts1, matches, confidence, vi, img[0].clone(), img[1].clone(),
+                                    opt.test_intervals, osp.join(opt.output_dir,scene_name), None, None, scene_name, restore_transform)
 
+                        save_inflow_outflow_density(img, matched_results['scores'], matched_results['pre_points'],
+                                                    matched_results['target'], matched_results['match_gt'],
+                                                    osp.join(opt.output_dir,scene_name), scene_name, vi, opt.test_intervals)
         scenes_pred_dict.append(pred_dict)
 
 
@@ -221,11 +253,11 @@ if __name__=='__main__':
     pwd = os.path.split(os.path.realpath(__file__))[0]
     mae, mse, wrae=[],[],[]
 
-    MAE, MSE, WRAE= test(cfg_data,)
-    mae.append(MAE.item())
-    mse.append(MSE.item())
-    wrae.append(WRAE.item())
-    print(mae)
-    print(mse)
-    print(wrae)
-
+    #MAE, MSE, WRAE= test(cfg_data)
+    #mae.append(MAE.item())
+    #mse.append(MSE.item())
+    #wrae.append(WRAE.item())
+    #print(mae)
+    #print(mse)
+    #print(wrae)
+    test(cfg_data)
